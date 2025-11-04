@@ -7,103 +7,118 @@
     android:layout_height="match_parent"
     tools:context="activities.LoginActivity">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:gravity="center"
         android:padding="24dp"
         android:background="@android:color/white"
+        android:gravity="center_horizontal"
         tools:context=".activities.LoginActivity">
 
-        <!-- App title -->
+        <!-- Top section (centered title + inputs) -->
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="480dp"
+            android:layout_weight="1"
             android:gravity="center"
-            android:layout_marginBottom="40dp">
+            android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/textTrash"
+            <!-- App title -->
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TRASH"
-                android:textSize="38sp"
-                android:textStyle="bold"
-                android:fontFamily="serif"
-                android:layout_marginEnd="20dp" />
+                android:layout_marginBottom="40dp"
+                android:gravity="center"
+                android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/textTrack"
-                android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/textTrash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="serif"
+                    android:text="Trash"
+                    android:textSize="45sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textTrack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    android:text="Track"
+                    android:textSize="45sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Username -->
+            <EditText
+                android:id="@+id/etUsername"
+                android:layout_width="330dp"
                 android:layout_height="wrap_content"
-                android:text="TRACK"
-                android:textSize="38sp"
-                android:textStyle="bold"
-                android:fontFamily="serif" />
+                android:layout_marginTop="80dp"
+                android:layout_marginBottom="30dp"
+                android:background="#f8f4e0"
+                android:hint="Username"
+                android:inputType="textPersonName"
+                android:padding="12dp" />
+
+            <!-- Password -->
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                android:background="#f8f4e0"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:padding="12dp" />
         </LinearLayout>
 
-        <!-- Username -->
-        <EditText
-            android:id="@+id/etUsername"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Username"
-            android:padding="12dp"
-            android:background="#f8f4e0"
-            android:layout_marginBottom="16dp"
-            android:inputType="textPersonName" />
-
-        <!-- Password -->
-        <EditText
-            android:id="@+id/etPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Password"
-            android:padding="12dp"
-            android:background="#f8f4e0"
-            android:layout_marginBottom="24dp"
-            android:inputType="textPassword" />
-
-        <!-- Login Button -->
-        <Button
-            android:id="@+id/btnLogin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Log In"
-            android:textSize="28sp"
-            android:textStyle="bold"
-            android:textColor="@android:color/black"
-            android:backgroundTint="#7ed957"
-            android:layout_marginBottom="24dp" />
-
-        <!-- Sign up text -->
+        <!-- Bottom section (Login + Sign Up near bottom) -->
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center">
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="24dp">
 
-            <TextView
-                android:layout_width="wrap_content"
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Not registered yet? "
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/tvSignUp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Sign Up"
-                android:textColor="#4A00E0"
+                android:text="Log In"
+                android:fontFamily="serif"
+                android:textSize="35sp"
                 android:textStyle="bold"
-                android:textSize="14sp" />
+                android:textColor="@android:color/black"
+                android:backgroundTint="#7ed957"
+                android:layout_marginBottom="16dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Not registered yet? "
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvSignUp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sign Up"
+                    android:textColor="#4A00E0"
+                    android:textStyle="bold"
+                    android:textSize="14sp" />
+            </LinearLayout>
         </LinearLayout>
 
     </LinearLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
