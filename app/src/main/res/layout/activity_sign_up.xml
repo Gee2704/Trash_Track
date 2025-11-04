@@ -5,6 +5,165 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
     tools:context="activities.SignUpActivity">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="24dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/textSignUpTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Sign Up"
+                android:textColor="#142132"
+                android:fontFamily="@font/bungee_regular"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <!-- Full Name -->
+            <EditText
+                android:id="@+id/etFullName"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="15dp"
+                android:background="#f8f4e0"
+                android:hint="Full Name"
+                android:inputType="textPersonName"
+                android:padding="14dp" />
+
+            <!-- Address -->
+            <EditText
+                android:id="@+id/etAddress"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:background="#f8f4e0"
+                android:hint="Address"
+                android:inputType="textPostalAddress"
+                android:padding="14dp" />
+
+            <!-- Barangay row -->
+            <LinearLayout
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tvBarangayLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:text="Barangay:"
+                    android:textColor="#142132"
+                    android:textSize="16sp" />
+
+                <Spinner
+                    android:id="@+id/spinnerBarangay"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:background="#f8f4e0"
+                    android:padding="8dp" />
+            </LinearLayout>
+
+            <!-- Username -->
+            <EditText
+                android:id="@+id/etUsername"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:background="#f8f4e0"
+                android:hint="Username"
+                android:inputType="textPersonName"
+                android:padding="14dp" />
+
+            <!-- Password -->
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:background="#f8f4e0"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:padding="14dp" />
+
+            <!-- Confirm Password -->
+            <EditText
+                android:id="@+id/etConfirmPassword"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:background="#f8f4e0"
+                android:hint="Confirm Password"
+                android:inputType="textPassword"
+                android:padding="14dp" />
+
+            <!-- Sign In button aligned to right -->
+            <LinearLayout
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:layout_marginBottom="25dp">
+
+                <Button
+                    android:id="@+id/btnSignUp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:text="Sign In"
+                    android:fontFamily="@font/bungee_regular"
+                    android:textSize="22sp"
+                    android:textColor="#142132"
+                    android:backgroundTint="#6fb78d"
+                    android:paddingStart="30dp"
+                    android:paddingEnd="30dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    app:cornerRadius="15dp"/>
+            </LinearLayout>
+
+            <!-- Already have an account -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Already have an account? "
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:minHeight="40dp"
+                    android:minWidth="48dp"
+                    android:text="Log In"
+                    android:textColor="#4A00E0"
+                    android:textStyle="bold"
+                    android:layout_marginTop="2dp"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
