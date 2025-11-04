@@ -13,6 +13,27 @@
         android:theme="@style/Theme.TrashTrack"
         tools:targetApi="31">
         <activity
+            android:name="activities.AccountSettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name="activities.AnnouncementsActivity"
+            android:exported="false" />
+        <activity
+            android:name="activities.FullScheduleActivity"
+            android:exported="false" />
+        <activity
+            android:name="activities.UserMainActivity"
+            android:exported="false" />
+        <activity
+            android:name="activities.SignUpActivity"
+            android:exported="false" />
+        <activity
+            android:name="activities.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name="activities.WelcomeActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
